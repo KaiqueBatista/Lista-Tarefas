@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsivo para dispositivos móveis -->
+    <title>Lista Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+        <h1>Lista de Tarefas</h1>
+  </header>
+<main class="container">
+  
+  <!-- INPUT -->
+  <div class="card-input">   
+    <div class="input-box">
+      <input id="tarefa" placeholder="Digite sua Tarefa">
+      <button id="adicionar">Adicionar</button>
+    </div>
+  </div>
+  
+  <!-- FILTROS -->
+  <div class = "filtros">
+    <button onclick = "mudarFiltro('todas', event)">Todas</button>
+    <button onclick = "mudarFiltro('pendentes', event)">Tarefas Pendentes</button>
+    <button onclick = "mudarFiltro('concluidas', event)">Tarefas Concluídas</button>
+  </div>
+
+  <!-- LISTA  -->
+  <div class="card-lista">
+    <div class="lista-box">
+      <ul id="lista"></ul>
+    </div>
+  </div>
+
+</main>
+  
+ <footer>
+  <p>© 2026 Lista Tarefas</p>
+ </footer>
+
+    <!-- Link para JavaScript externo (opcional) -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>

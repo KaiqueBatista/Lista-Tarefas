@@ -1,0 +1,236 @@
+/* RESET E BASE */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  box-sizing: border-box;
+}
+
+/* FUNDO E LAYOUT BASE */
+body {
+  background: linear-gradient(135deg, #5f0fff, #c026d3);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+/* HEADER */
+header {
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* CONTAINER PRINCIPAL */
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* CARD DO INPUT */
+.card-input {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUT BOX */
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ESTILO DO INPUT */
+.input-box input {
+  padding: 10px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+/* PLACEHOLDER MAIS SUAVE */
+.input-box input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+/* EFEITO AO CLICAR NO INPUT */
+.input-box input:focus {
+  border-color: #c026d3;
+  box-shadow: 0 0 10px rgba(192, 38, 211, 0.5);
+}
+
+/* BOTÃO ADICIONAR */
+#adicionar {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  background: linear-gradient(135deg,#7b2ff7,#c026d3);
+  transition: 0.2s;
+}
+
+/* HOVER BOTÃO ADICIONAR */
+#adicionar:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* CONTAINER DOS FILTROS */
+.filtros {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+/* BOTÕES DE FILTRO */
+.filtros button {
+  flex: 1;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(135deg,#7b2ff7,#c026d3);
+  color: white;
+  transition: 0.2s;
+  font-size: 12px;
+  border: none;
+}
+
+/* HOVER BOTÕES DE FILTRO */
+.filtros button:hover {
+  filter: brightness(1.1);
+}
+
+/* FILTRO ATIVO */
+.filtros button.ativo {
+  background: linear-gradient(135deg,#7b2ff7,#c026d3);
+  font-weight: 600;
+}
+
+/* CARD DA LISTA */
+.card-lista {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+/* LISTA VISÍVEL */
+.card-lista.ativa {
+  display: flex;
+  flex-direction: column;
+}
+
+/* REMOVER BULLETS DA LISTA */
+ul {
+  list-style: none;
+}
+
+/* ITEM DA LISTA */
+li {
+  background: rgba(255,255,255,0.15);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(5px);
+  transition: 0.2s;
+  margin-bottom: 10px;
+}
+
+/* TEXTO DO ITEM */
+li span {
+  flex: 1;
+  cursor: pointer;
+}
+
+/* HOVER ITEM */
+li:hover {
+  transform: scale(1.01);
+  background: rgba(255,255,255,0.2);
+}
+
+/* TAREFA CONCLUÍDA */
+.concluido {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* CONTAINER BOTÕES DE CADA ITEM */
+.botoes {
+  display: flex;
+  gap: 5px;
+}
+
+/* BOTÕES DE CADA ITEM */
+.botoes button {
+  flex: 1;
+  padding: 5px;
+  font-size: 11px;
+}
+
+/* BOTÃO EXCLUIR */
+.excluir {
+  background: linear-gradient(135deg,#ff4d6d,#ff758f);
+  color: white;
+}
+
+/* HOVER EXCLUIR */
+.excluir:hover {
+  transform: scale(1.05);
+}
+
+/* BOTÃO EDITAR */
+.editar {
+  background: linear-gradient(135deg,#a855f7,#7b2ff7);
+  color: white;
+}
+
+/* HOVER EDITAR */
+.editar:hover {
+  transform: scale(1.05);
+}
+
+/* RODAPÉ */
+footer {
+  margin-top: 20px;
+  color: rgba(255,255,255,0.8);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  header h1 { font-size: 20px; }
+  .card-input, .card-lista { padding: 15px; }
+  button { font-size: 11px; }
+}
